@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OldManIdle
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 0a6aabd9d8e7d47abb4ab4a74e8f3d30, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8b2704248651b4c8c84168c5fe44bcf2, type: 3}
+  - {fileID: 21300000, guid: e6fadb97321a142be9304bddd4a6dddf, type: 3}
+  - {fileID: 21300000, guid: 5574dec732d104ed9899876e79b21125, type: 3}
+  - {fileID: 21300000, guid: c1720c49a42c1419797441b6bf7366e7, type: 3}
+  - {fileID: 21300000, guid: df829da9f5dcc433b84808a69d2fdbad, type: 3}
+  - {fileID: 21300000, guid: 9750692bf14f846dba295a4de247f095, type: 3}
+  - {fileID: 21300000, guid: 1d93796b9d2f54fc1919e13f6f19a33c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - oldman-idle-1
+  - oldman-idle-3
+  - oldman-idle-4
+  - oldman-idle-6
+  - oldman-idle-8
+  - oldman-idle-7
+  - oldman-idle-2
+  m_RenderDataMap: {}
+  m_Tag: OldManIdle
+  m_IsVariant: 0
