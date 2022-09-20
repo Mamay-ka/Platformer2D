@@ -20,21 +20,25 @@ public class Lessons : MonoBehaviour
 
     private SpriteAnimator _spriteAnimator;
 
+    private MainHeroWalker _mainHeroWalker;
+
     //далее инициализируем все контроллеры в методе Старт
     private void Start()
     {
-        _spriteAnimator = new SpriteAnimator(_spriteAnimationConfig);
-        _spriteAnimator.StartAnimation(_characterView.SpriteRenderer, Track.walk, true, 10);
-
         _paralaxManager = new ParalaxManager(_camera, _background.transform);//инициализируем данное поле. Создаем конструктор и перемещаем на вход камеру
+        _spriteAnimator = new SpriteAnimator(_spriteAnimationConfig);
+        //_spriteAnimator.StartAnimation(_characterView.SpriteRenderer, Track.walk, true, 10);
+        _mainHeroWalker = new MainHeroWalker(_characterView, _spriteAnimator);//создали объект
     }
 
     //в методе апдэйт будет крутиться логика
     private void Update()
     {
+        
+        _paralaxManager.Update();//теперь конструктор в Апдейте нужно обновлять каждый раз.(взяли Update из класса ParalaxManager )
         _spriteAnimator.Update();
 
-        _paralaxManager.Update();//теперь конструктор в Апдейте нужно обновлять каждый раз.(взяли Update из класса ParalaxManager )
+        _mainHeroWalker.Update();//запустили Апдэйт из данного кoнтроллера
     }
 
     //для движения персонажа при помощи физики понадобится фикседАпдэйт

@@ -6,7 +6,8 @@ using UnityEngine;
 public enum Track 
 {
     walk,
-    run
+    idle,
+    jump
 }
 /*[CreateAssetMenu(fileName = "SpriteAnimationsConfig", menuName = "Configs/SpriteAnimationsConfig", order = 1)]
 
