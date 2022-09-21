@@ -7,7 +7,7 @@ public class BulletsEmitter : MonoBehaviour
     private const float _startSpeed = 5;
 
     private List<Bullet> _bullets = new List<Bullet>();
-    private Transform _transform;
+    public Transform _transform;
 
     private int _currentIndex;
     private float _timeTillNextBullet;

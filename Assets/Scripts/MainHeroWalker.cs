@@ -9,17 +9,17 @@ public class MainHeroWalker
 
     private float _yVelocity;//скорость дл€ оси Y дл€ прыжка
 
-    private readonly CharacterView _characterView;//создаем пол€ дл€ конструктора
+    private readonly CharacterView _characterView;
     private readonly SpriteAnimator _spriteAnimator;
 
-    //передаем в конструктор основные параметры из CharacterView и SpriteAnimator
+    
     public MainHeroWalker(CharacterView characterView, SpriteAnimator spriteAnimator)
     {
       _characterView = characterView;
        _spriteAnimator = spriteAnimator;
     }
 
-    //напишем логику
+    
     public void Update()
     {
         var doJump = Input.GetAxis(Vertical) > 0;//надо пон€ть, прыгаем ли мы

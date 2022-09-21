@@ -43,6 +43,11 @@ public class Test : MonoBehaviour
     {
         var t = (Time.time - _timer)/_timeMove;
         transform.position =  Vector3.Lerp(_startPosition, _point2.position, t);
+
+        //Rigidbody2D _rigidbody2D = new Rigidbody2D();
+        // _rigidbody2D.AddForce(Vector3.right)//направим силу вправо
+        //_rigidbody2D.AddForceAtPosition(Vector3.right, transform.localPosition + Vector3.right);//прикладываем силу к какой-нибудь точке тела
+        //_rigidbody2D.AddTorque(5);//вращательный момент относительно оси Z
     }
 
 }

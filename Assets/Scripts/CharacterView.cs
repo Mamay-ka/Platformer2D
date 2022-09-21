@@ -5,7 +5,7 @@ public class CharacterView : MonoBehaviour
 {
     //дл€ достапа к —прайт–ендерер. „тобы создать анимированное движение персонажа
     [SerializeField]
-    private SpriteRenderer _spriteRenderer;//поле дл€ —прайт–ендерера игрока
+    private SpriteRenderer _spriteRenderer;
 
     [Header("Settings")]//отделим пол€ в которых что-то перемещаем от числовых полей
 
@@ -30,9 +30,9 @@ public class CharacterView : MonoBehaviour
     [SerializeField]//ускорение
     private float _acceleration = -10f;//примерное значение ускорени€ свободного падени€
 
-    public SpriteRenderer SpriteRenderer => _spriteRenderer;//свойство
+    public SpriteRenderer SpriteRenderer => _spriteRenderer;
 
-    //добавим свойства сериализованных полей
+    
     public float WalkSpeed => _walkSpeed;
     public float AnimatonSpeed => _animatonSpeed;
     public float JumpStartSpeed => _jumpStartSpeed;
