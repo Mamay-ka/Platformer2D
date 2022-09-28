@@ -7,7 +7,8 @@ public enum Track
 {
     walk,
     idle,
-    jump
+    jump,
+    coin_rotation
 }
 /*[CreateAssetMenu(fileName = "SpriteAnimationsConfig", menuName = "Configs/SpriteAnimationsConfig", order = 1)]
 

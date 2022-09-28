@@ -7,6 +7,12 @@ public class CharacterView : MonoBehaviour
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
 
+    [SerializeField]
+    private Rigidbody2D _rigidbody;
+
+    [SerializeField]
+    private Collider2D _collider2D;//передадим ContactsPoller
+
     [Header("Settings")]//отделим пол€ в которых что-то перемещаем от числовых полей
 
     [SerializeField]//скорость ходьбы/движени€
@@ -40,4 +46,9 @@ public class CharacterView : MonoBehaviour
     public float FlyThresh => _flyThresh;
     public float GroundLevel => _groundLevel;
     public float Acceleration => _acceleration;
+
+    public Rigidbody2D Rigidbody => _rigidbody; 
+    public Collider2D Collider2D => _collider2D;
+
+    
 }
