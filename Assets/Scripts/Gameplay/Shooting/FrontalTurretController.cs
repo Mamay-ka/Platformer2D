@@ -8,9 +8,9 @@ namespace Gameplay.Shooting
 {
     public abstract class FrontalTurretController : BaseController
     {
-        public bool IsOnCooldown => CooldownTimer.InProgress;
+        public bool IsOnCooldown => CooldownTimer.InProgress;//
         
-        protected Timer CooldownTimer;
+        protected Timer CooldownTimer;//
 
         protected readonly TurretModuleConfig Config;
         protected readonly ProjectileFactory ProjectileFactory;
@@ -33,14 +33,14 @@ namespace Gameplay.Shooting
             ProjectileFactory = new ProjectileFactory(Config.ProjectileConfig, Config.ProjectileConfig.Prefab, 
                 turretPoint.transform, unitType);
 
-            CooldownTimer = new Timer(config.SpecificWeapon.Cooldown);
+            CooldownTimer = new Timer(config.SpecificWeapon.Cooldown);//
             
             AddGameObject(turretPoint);
         }
 
         protected override void OnDispose()
         {
-            CooldownTimer.Dispose();
+            CooldownTimer.Dispose();//
         }
 
         public abstract void CommenceFiring();

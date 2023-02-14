@@ -41,11 +41,7 @@ namespace Gameplay.Player.Movement
             }
         }
 
-        public void Leap(bool leapLeft)//!!!!
-        {
-
-        }
-
+       
         public void Turn(bool turningLeft)
         {
             bool isContinuingTurn = CurrentTurnRate < 0 == turningLeft;

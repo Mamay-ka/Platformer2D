@@ -11,9 +11,9 @@ namespace Gameplay.Movement
         public float StoppingSpeed => _config.stoppingSpeed;
         public float StartingTurnSpeed => _config.startingTurnSpeed;
 
-        public float LeapSpeed => _config.leapSpeed;//!!!
-        public float LeapTime => _config.leapTime;//!!!
+        public float LeapSpeed;
 
+        public float LeapCooldown;
         public float CurrentSpeed { get; private set; }
         public float CurrentTurnRate { get; private set; }
 
@@ -24,6 +24,8 @@ namespace Gameplay.Movement
             _config = config;
             CurrentSpeed = 0.0f;
             CurrentTurnRate = 0.0f;
+            LeapSpeed = _config.leapSpeed;
+            LeapCooldown = _config.leapCooldown;
         }
 
         public void Accelerate(bool movingForward)
@@ -87,10 +89,6 @@ namespace Gameplay.Movement
             return speedDifference * deltaTime / accelerationTime;
         }
 
-        public float CountLeap(float leapSpeed, float leapTime)//!!!
-        {
-            float deltaTime = Time.deltaTime;
-            return leapSpeed * deltaTime / leapTime;
-        }
+        
     }
 }

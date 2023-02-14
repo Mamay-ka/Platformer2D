@@ -1,6 +1,7 @@
 using Abstracts;
 using Gameplay.Health;
 using Gameplay.Input;
+using Gameplay.Mechanics.Timer;
 using Gameplay.Movement;
 using Gameplay.Player.FrontalGuns;
 using Gameplay.Player.Inventory;
@@ -34,6 +35,9 @@ namespace Gameplay.Player
         private readonly SubscribedProperty<bool> _primaryFireInput = new();
         private readonly SubscribedProperty<bool> _changeWeaponInput = new ();
 
+        
+        
+       
         private const byte MaxCountOfPlayerSpawnTries = 10;
         private const float PlayerSpawnClearanceRadius = 40.0f;
 
@@ -49,6 +53,7 @@ namespace Gameplay.Player
 
             var inventoryController = AddInventoryController(_config.Inventory);
             var movementController = AddMovementController(_config.Movement, _view);
+           
             var frontalGunsController = AddFrontalGunsController(inventoryController.Turrets, _view);
             var healthController = AddHealthController(_config.HealthConfig, _config.ShieldConfig);
             AddCrosshair();
